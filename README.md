@@ -30,6 +30,16 @@ For official Azure Fundamentals learning materials, visit [Microsoft Learn](http
 
 ## Disclaimer
 
-CloudReady Africa is an independent, unofficial learning project. It is not affiliated with or endorsed by Microsoft. All practice questions are original learning questions, not copied real exam questions.
+CloudReady Africa is an independent, unofficial learning project. It is not affiliated with or endorsed by Microsoft. All practice questions are original learning 🌐 **Live Demo:** https://basie98.github.io/cloud-ready-africa/
+
+💻 **Source Code:** https://github.com/Basie98/cloud-ready-africa
+
+## 🎯 The Problem
+
+Learning cloud computing concepts can feel overwhelming for beginners preparing for the AZ-900 certification. CloudReady Africa brings interactive revision activities into one place to make studying more accessible and organised.
+
+## 🌍 Project Goal
+
+The goal is to help learners build confidence in Azure Fundamentals through practice, revision, guided explanations and study progress tracking.questions,not copied real exam questions.
 
 This project is for educational purposes and does not guarantee exam success.
