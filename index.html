@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CloudReady Africa is an unofficial AZ-900 study companion with quizzes, flashcards, a study planner, a study buddy, and readiness tracking.">
+  <title>CloudReady Africa | AZ-900 Study Companion</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="CloudReady Africa home">
+        <span class="brand-icon">☁</span>
+        <span><strong>CloudReady</strong><small>A F R I C A</small></span>
+      </a>
+      <p class="nav-label">YOUR LEARNING SPACE</p>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="dashboard"><span>⌂</span> Dashboard</button>
+        <button class="nav-link" data-view="quiz"><span>✓</span> Smart Quiz</button>
+        <button class="nav-link" data-view="flashcards"><span>▤</span> Flashcards</button>
+        <button class="nav-link" data-view="planner"><span>▦</span> Study Planner</button>
+        <button class="nav-link" data-view="buddy"><span>✦</span> AI Study Buddy</button>
+        <button class="nav-link" data-view="readiness"><span>◷</span> Readiness Tracker</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-tip"><span>✦</span><strong>Small steps add up.</strong><p>Study a little every day. Your future self will thank you.</p></div>
+        <p class="unofficial">Independent learning project · Not affiliated with Microsoft</p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">YOUR AZURE LEARNING JOURNEY</p>
+          <h1 id="page-title">Welcome back, learner <span class="wave">✦</span></h1>
+        </div>
+        <div class="topbar-right"><span class="status-dot"></span><span>Learning mode</span><div class="avatar">CR</div></div>
+      </header>
+
+      <section class="view active" id="view-dashboard">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="pill pill-light">YOUR CLOUD JOURNEY STARTS HERE</span>
+            <h2>Build your cloud confidence,<br><em>one concept at a time.</em></h2>
+            <p>Practise Azure fundamentals, learn from mistakes, and prepare with a plan that works for you.</p>
+            <button class="btn btn-light" data-go="quiz">Start a practice quiz <span>→</span></button>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="cloud-illustration">☁</div><div class="floating-card card-a">✦ Learn</div>
+            <div class="floating-card card-b">✓ Grow</div><div class="floating-dot dot-a"></div><div class="floating-dot dot-b"></div>
+          </div>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-icon teal">✓</div><div><p>Quizzes completed</p><strong id="stat-quizzes">0</strong><small>Keep practising</small></div></article>
+          <article class="stat-card"><div class="stat-icon purple">◎</div><div><p>Average score</p><strong id="stat-average">—</strong><small>Across completed quizzes</small></div></article>
+          <article class="stat-card"><div class="stat-icon orange">▤</div><div><p>Cards reviewed</p><strong id="stat-cards">0</strong><small>Build your memory</small></div></article>
+          <article class="stat-card"><div class="stat-icon blue">◷</div><div><p>Readiness status</p><strong class="stat-word" id="stat-readiness">Starting</strong><small id="stat-readiness-note">Take a quiz to begin</small></div></article>
+        </div>
+
+        <div class="section-heading"><div><p class="eyebrow">YOUR TOOLKIT</p><h2>Choose your next step</h2></div><span class="muted">Five ways to learn</span></div>
+        <div class="feature-grid">
+          <button class="feature-card" data-go="quiz"><span class="feature-icon teal">✓</span><strong>Smart Quiz</strong><p>Practise original questions and get instant explanations.</p><span class="feature-link">Practise now →</span></button>
+          <button class="feature-card" data-go="flashcards"><span class="feature-icon purple">▤</span><strong>Flashcards</strong><p>Review key terms and concepts with quick memory checks.</p><span class="feature-link">Review cards →</span></button>
+          <button class="feature-card" data-go="planner"><span class="feature-icon orange">▦</span><strong>Study Planner</strong><p>Turn your exam date and available hours into a plan.</p><span class="feature-link">Make a plan →</span></button>
+          <button class="feature-card" data-go="buddy"><span class="feature-icon blue">✦</span><strong>Study Buddy</strong><p>Explore plain-language explanations and local examples.</p><span class="feature-link">Ask a question →</span></button>
+          <button class="feature-card" data-go="readiness"><span class="feature-icon pink">◷</span><strong>Readiness Tracker</strong><p>See your scores by topic and identify what to revise.</p><span class="feature-link">View progress →</span></button>
+        </div>
+        <div class="bottom-note"><span>💡</span><p><strong>Remember:</strong> Your progress is saved in this browser on this device. This is an independent study tool, not an official exam or a guarantee of passing.</p></div>
+      </section>
+
+      <section class="view" id="view-quiz">
+        <div class="page-intro"><p class="eyebrow">PRACTISE WITH PURPOSE</p><h2>Smart Quiz</h2><p>Original practice questions with instant feedback and simple explanations.</p></div>
+        <div id="quiz-setup" class="panel">
+          <label for="quiz-topic">Choose a topic</label>
+          <select id="quiz-topic">
+            <option value="all">All AZ-900 topic areas</option>
+            <option value="cloud">Describe cloud concepts</option>
+            <option value="architecture">Describe Azure architecture and services</option>
+            <option value="management">Describe Azure management and governance</option>
+          </select>
+          <label for="quiz-count">Number of questions</label>
+          <select id="quiz-count"><option value="5">5 questions</option><option value="10">10 questions</option><option value="all">All available questions</option></select>
+          <button class="btn btn-primary" id="start-quiz">Start quiz →</button>
+          <p class="small-note">These are original study questions, not real or recalled exam questions.</p>
+        </div>
+        <div id="quiz-play" class="panel hidden">
+          <div class="quiz-top"><span class="pill" id="quiz-topic-pill">Topic</span><span class="muted" id="quiz-progress-label">Question 1 of 5</span></div>
+          <div class="progress-track"><div id="quiz-progress-bar" class="progress-fill"></div></div>
+          <h3 id="question-text">Question goes here</h3>
+          <div id="answer-options" class="answer-options"></div>
+          <div id="answer-feedback" class="feedback hidden" aria-live="polite"></div>
+          <div class="quiz-actions"><button class="btn btn-primary hidden" id="next-question">Next question →</button></div>
+        </div>
+        <div id="quiz-results" class="panel hidden"></div>
+      </section>
+
+      <section class="view" id="view-flashcards">
+        <div class="page-intro"><p class="eyebrow">REMEMBER THE ESSENTIALS</p><h2>Flashcards</h2><p>Test your memory. Think of the answer before revealing it.</p></div>
+        <div class="flashcard-wrap">
+          <div class="flashcard-meta"><span class="pill" id="flashcard-topic">AZURE BASICS</span><span class="muted" id="flashcard-count">Card 1 of 10</span></div>
+          <button id="flashcard" class="flashcard" aria-label="Reveal flashcard answer"><span class="flash-label" id="flash-label">QUESTION</span><strong id="flash-front">What is cloud computing?</strong><span class="flash-hint" id="flash-hint">Click to reveal answer ↗</span></button>
+          <div class="flash-controls"><button class="btn btn-secondary" id="flash-prev">← Previous</button><button class="btn btn-secondary" id="flash-missed">Need to review</button><button class="btn btn-primary" id="flash-known">I know this ✓</button><button class="btn btn-secondary" id="flash-next">Next →</button></div>
+          <p class="small-note centered" id="flash-status" aria-live="polite">Your review count is saved on this device.</p>
+        </div>
+      </section>
+
+      <section class="view" id="view-planner">
+        <div class="page-intro"><p class="eyebrow">MAKE TIME FOR YOUR GOAL</p><h2>Personal Study Planner</h2><p>Build a simple revision schedule around your exam date and available time.</p></div>
+        <div class="two-column">
+          <form id="planner-form" class="panel">
+            <h3>Set up your plan</h3>
+            <label for="exam-date">Your target exam date</label><input id="exam-date" type="date" required>
+            <label for="study-hours">Hours you can study each day</label><input id="study-hours" type="number" min="0.5" max="12" step="0.5" value="1.5" required>
+            <fieldset><legend>Topics you want to improve</legend>
+              <label class="check-row"><input type="checkbox" name="weak-topic" value="cloud" checked> Cloud concepts</label>
+              <label class="check-row"><input type="checkbox" name="weak-topic" value="architecture" checked> Azure architecture and services</label>
+              <label class="check-row"><input type="checkbox" name="weak-topic" value="management"> Azure management and governance</label>
+            </fieldset>
+            <button class="btn btn-primary" type="submit">Generate my plan →</button>
+          </form>
+          <div class="panel planner-output" id="planner-output"><div class="empty-state"><span>▦</span><h3>Your plan will appear here</h3><p>Choose your exam date, daily study time, and topics to revise.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-buddy">
+        <div class="page-intro"><p class="eyebrow">NO QUESTION IS TOO BASIC</p><h2>AI Study Buddy <span class="pill">Demo mode</span></h2><p>Explore prepared beginner-friendly explanations. No API key is needed.</p></div>
+        <div class="buddy-layout">
+          <div class="panel buddy-panel">
+            <div class="buddy-welcome"><div class="buddy-avatar">✦</div><div><strong>Hi, future cloud professional!</strong><p>Choose a topic or type an Azure concept. I'll explain it in simple terms with a relatable example.</p></div></div>
+            <div class="suggestion-chips"><button data-question="What is cloud computing?">Cloud computing</button><button data-question="Explain IaaS, PaaS and SaaS">IaaS, PaaS, SaaS</button><button data-question="What is a virtual machine?">Virtual machines</button><button data-question="Explain high availability">High availability</button><button data-question="What is the shared responsibility model?">Shared responsibility</button></div>
+            <form id="buddy-form" class="buddy-input-row"><input id="buddy-input" placeholder="Ask about an Azure concept…" autocomplete="off" required><button class="btn btn-primary" type="submit">Explain ↗</button></form>
+            <p class="small-note">This prototype uses a prepared knowledge guide, not a live generative AI model.</p>
+          </div>
+          <div class="panel buddy-answer" id="buddy-answer"><div class="empty-state"><span>✦</span><h3>Your explanation appears here</h3><p>Try asking about cloud computing, regions, virtual machines, storage, identity, or costs.</p></div></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-readiness">
+        <div class="page-intro"><p class="eyebrow">PROGRESS, NOT PRESSURE</p><h2>Readiness Tracker</h2><p>Use your practice results to decide what to revise next.</p></div>
+        <div class="readiness-banner panel"><div><p class="eyebrow">PRACTICE PERFORMANCE</p><h3 id="readiness-heading">Your journey is just beginning</h3><p id="readiness-description">Complete a quiz to start building your readiness picture.</p></div><div class="readiness-circle" id="readiness-circle"><strong id="readiness-score">—</strong><span>average score</span></div></div>
+        <div class="panel"><div class="section-heading compact"><div><h3>Performance by topic</h3><p class="muted">Based on your completed quizzes</p></div></div><div id="topic-progress" class="topic-progress"></div></div>
+        <div class="panel"><div class="section-heading compact"><div><h3>Recent quiz attempts</h3><p class="muted">Your latest results saved in this browser</p></div><button class="btn btn-secondary btn-small" id="clear-progress">Reset progress</button></div><div id="attempt-history"></div></div>
+        <p class="small-note">This is a practice indicator, not an official Microsoft score or a guarantee that you are ready to pass.</p>
+      </section>
+
+      <footer class="footer"><span>CloudReady Africa</span><span>Independent learning project · Unofficial AZ-900 study tool</span><a href="https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/" target="_blank" rel="noopener noreferrer">Official skills outline ↗</a></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
