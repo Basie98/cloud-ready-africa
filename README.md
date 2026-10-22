@@ -41,5 +41,19 @@ Learning cloud computing concepts can feel overwhelming for beginners preparing 
 ## 🌍 Project Goal
 
 The goal is to help learners build confidence in Azure Fundamentals through practice, revision, guided explanations and study progress tracking.questions,not copied real exam questions.
+## 🚀 Future Improvements
+
+- Expand the original practice question bank.
+- Add topic-based progress summaries.
+- Introduce custom study goals.
+- Explore AI-powered explanations in a future version.
+
+## 🏆 Hackathon Project
+
+Built for the **#1MillionDevs Vibe Coding Hackathon: AZ-900 Exam Prep Edition**.
+
+## ⚠️ Disclaimer
+
+CloudReady Africa is an independent, unofficial educational project. It is not affiliated with or endorsed by Microsoft. Practice questions are original learning questions, not copied real exam questions. This tool supports learning and does not guarantee exam success.
 
 This project is for educational purposes and does not guarantee exam success.
